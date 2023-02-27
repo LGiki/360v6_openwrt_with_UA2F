@@ -1,18 +1,18 @@
 
-## 一个云编译UA2F固件的项目
-###### 已经正常工作了哦，在使用中有任何问题，欢迎反馈给我
+# 360v6 Openwrt 固件云编译 (包含 [UA2F](https://github.com/Zxilly/UA2F)、[rkp-ipid](https://github.com/CHN-beta/rkp-ipid))
 
-* 如果要自己设置规则记得把
-<br><code>iptables -t mangle -A ua2f -m set --set nohttp dst,dst -j RETURN</code>
-* 改成以下规则
-<br><code>iptables -t mangle -A ua2f -m set --match-set nohttp dst,dst -j RETURN</code>
+可以在 [Releases](/releases) 页面下载最新编译的固件，或者 Fork 本项目自行编译。
 
+固件包含了 [UA2F](https://github.com/Zxilly/UA2F) 和 [rkp-ipid](https://github.com/CHN-beta/rkp-ipid) 可用于防止校园网检测多设备上网。
 
-### 食用方法：
-##### 用其他设备的话请改Main.config里的上面三行，改成自己所需要的 config，复制别人的来用也行，下面的不要动哦
-##### aciton务必使用Main
-##### 目前本地编译x86，已测试成功
+固件的无线参数校准文件来自于 [https://www.right.com.cn/forum/thread-8228708-1-1.html](https://www.right.com.cn/forum/thread-8228708-1-1.html)。
 
-<br><a href="http://trac.gateworks.com/wiki/OpenWrt/kernelconfig">参考文献</a><br>
-<a href="https://sunbk201public.notion.site/sunbk201public/OpenWrt-f59ae1a76741486092c27bc24dbadc59">详细教程</a><br>
-<a href=“https://github.com/Zxilly/UA2F”>UA2F</a><br>
+# References
+
+- [UA2F](https://github.com/Zxilly/UA2F)
+
+- [rkp-ipid](https://github.com/CHN-beta/rkp-ipid)
+
+- [OpenWrt 编译与防检测部署教程](https://sunbk201public.notion.site/sunbk201public/OpenWrt-f59ae1a76741486092c27bc24dbadc59)
+
+- [Actions-immortalWrt-UA2F](https://github.com/MoorCorPa/Actions-immortalWrt-UA2F)
