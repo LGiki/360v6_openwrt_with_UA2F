@@ -124,6 +124,10 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
+        mkdir -p Packages
+        mv -f openwrt/bin/packages/*/*/*.ipk Packages
+        mv -f openwrt/bin/targets/*/*/packages/*.ipk Packages
+        tar -zcvf Packages.tar.gz Packages
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
