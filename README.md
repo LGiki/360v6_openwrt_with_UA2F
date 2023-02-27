@@ -7,6 +7,8 @@
 
 固件的无线参数校准文件来自于 [https://www.right.com.cn/forum/thread-8228708-1-1.html](https://www.right.com.cn/forum/thread-8228708-1-1.html)。
 
+为了 UA2F 能正常工作，需要将 `网络——防火墙——启用FullCone-NAT` 的勾选取消，将 `系统——启动项——qca-nss-ecm` 禁用。
+
 # References
 
 - [UA2F](https://github.com/Zxilly/UA2F)
