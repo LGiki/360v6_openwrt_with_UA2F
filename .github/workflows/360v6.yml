@@ -128,6 +128,7 @@ jobs:
         mv -f openwrt/bin/packages/*/*/*.ipk Packages
         mv -f openwrt/bin/targets/*/*/packages/*.ipk Packages
         tar -zcvf Packages.tar.gz Packages
+        mv Packages.tar.gz openwrt/bin/targets/*/*
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
